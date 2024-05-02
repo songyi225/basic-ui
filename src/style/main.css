@@ -9,35 +9,51 @@ body {
     font-family: "Noto Sans KR", sans-serif;
 }
 
-.header, .visual, .main, .slogan, .footer {
+.header, .visual, .main, .slogan, .footer-inner {
   width: var(--container-size, 940px);
   /* 5개 선택자에는 가로 크기를 컨테이너 사이즈 변수가 기억하고 있는 940사이즈로 해줘. 
   만약 호출할 변수가 없으면 940으로 할당해줘 -> 콜백 컨텐츠 */
   margin: 0 auto;
-
 }
 
 /* 헤더 */
 .header {
   background-color: yellow;
+  height: 10vh;
 }
 
 /* 비주얼 */
 .visual {
   background-color: pink;
+  height: 10vh;
 }
 
 /* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
+  height: 60vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start; /* 메인 축의 정렬을 담당 -> item들 (자식요소) */
+  align-items: stretch; /* 교차 축의 정렬을 담당 -> item들 (자식요소) */
+}
+
+.group {
+  border: 1px solid red;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
+  height: 10vh;
 }
 
 /* 푸터 */
 .footer {
   background-color: orange;
+}
+
+.footer-inner {
+  background-color: yellow;
+  height: 10vh;
 }
