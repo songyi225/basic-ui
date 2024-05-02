@@ -1,20 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+:root {
+  --container-size: 940px;
+  /* 화면에 아무런 영향이 없고 불러 써야 영향이 생김 */
+}
+
 body {
     font-family: "Noto Sans KR", sans-serif;
+}
+
+.header, .visual, .main, .slogan, .footer {
+  width: var(--container-size, 940px);
+  /* 5개 선택자에는 가로 크기를 컨테이너 사이즈 변수가 기억하고 있는 940사이즈로 해줘. 
+  만약 호출할 변수가 없으면 940으로 할당해줘 -> 콜백 컨텐츠 */
+  margin: 0 auto;
+
 }
 
 /* 헤더 */
 .header {
   background-color: yellow;
-  width: 940px;
 }
 
 /* 비주얼 */
-/* inline-size :  */
 .visual {
   background-color: pink;
-  inline-size: 940px;
 }
 
 /* 메인 콘텐츠 */
