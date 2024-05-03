@@ -18,11 +18,24 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: yellow;
-  height: 10vh;
+  background-color: darkblue;
+  height: 120px;
   padding: 0 50px;
   /* 위아래는 없고 좌우 공백만 -> 숏핸드표기법 단축표기법 -> 첫번쨰는 위아래패딩, 두번째는 좌우패딩 */
+  border-radius: 0 0 15px 15px;
+  /* 왼쪽상단부터 시계방향 */
+  position: relative;
 }
+
+/* 로고 */
+.logo {
+  background-color: orange;
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
+
 
 /* 비주얼 */
 .visual {
