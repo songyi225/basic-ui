@@ -20,6 +20,8 @@ body {
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
+  /* 위아래는 없고 좌우 공백만 -> 숏핸드표기법 단축표기법 -> 첫번쨰는 위아래패딩, 두번째는 좌우패딩 */
 }
 
 /* 비주얼 */
@@ -31,21 +33,47 @@ body {
 /* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
-  height: 60vh;
-  display: flex;
+  display: flow-root;
+  min-height: 450px; /* 컨텐츠양이 작더라도 안정감있는 레이아웃을 만들기 위해 최소높이를 할당 */
+  padding: 28px 16px 36px;
+
+  /* display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start; /* 메인 축의 정렬을 담당 -> item들 (자식요소) */
-  align-items: stretch; /* 교차 축의 정렬을 담당 -> item들 (자식요소) */
+  justify-content: space-between; /* 메인 축의 정렬을 담당 -> item들 (자식요소) */
+  /* align-items: stretch; /* 교차 축의 정렬을 담당 -> item들 (자식요소) */
+  /* padding: 28px 16px 36px; /* 위쪽 좌우 아래쪽 */
 }
 
 .group {
   border: 1px solid red;
+  float: left;
 }
+
+.group:nth-child(n+2) {
+  margin-left: 44px;
+}
+
+.group1 {
+  width: 250px;
+  background-color: orange;
+}
+
+.group2 {
+  width: 380px;
+  background-color: silver;
+}
+
+.group3 {
+  background-color: hotpink;
+  width: 190px;
+}
+
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear:both;
 }
 
 /* 푸터 */
@@ -56,4 +84,25 @@ body {
 .footer-inner {
   background-color: yellow;
   height: 10vh;
+}
+
+
+/* flex를 지원하는 웹브라우저를 위한 스타일 */
+
+/* @font-face {
+  font-family: ;
+  src: url();
+}
+
+@import url(...slogan); 
+
+요런 엣사인 사용했다! */
+
+@supports (display: flex) {
+  /* 사용자 환경에서 flex를 지원하면 이걸 해석하겠다! */
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
