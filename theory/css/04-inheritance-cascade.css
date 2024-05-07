@@ -1,0 +1,32 @@
+body {
+  color: #ff0000;
+  font-size: 30px;
+}
+
+div {
+  border: 1px solid blue;
+}
+/* id 선택자는 점수가 100점 */
+#heading {
+  color: darkkhaki;
+}
+
+/* 클래스 선택자는 점수가 10점 */
+.heading {
+  color: purple;
+}
+
+/* 선택자명과 클래스를 함께한 것은 점수가 11점 */
+h1.heading { /* 구체적인 선택자 선언 */
+  color: green;
+}
+
+/* 클래스 선택자는 점수가 10점 */
+.techit {
+  color: grey;
+}
+
+.container {
+  color: hotpink;
+}
+

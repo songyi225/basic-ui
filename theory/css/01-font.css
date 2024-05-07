@@ -1,0 +1,9 @@
+h1 {
+  font-size: 60px;
+}
+
+/* 16px(user agent..) 
+1.5em - 상속된 글자크기에 비례해서 계산됨 24px */
+p {
+  font-size: 1.5em;
+}

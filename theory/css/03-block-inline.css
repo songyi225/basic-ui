@@ -1,0 +1,17 @@
+p {
+  background: yellow;
+  border: 1px solid blue;
+  inline-size: 600px;
+  height: 400px;
+}
+
+span {
+  background: pink;
+  border: 1px solid blue;
+  padding: 20px;
+  inline-size: 500px;
+  width: 600px;
+  margin: 100px 50px;
+  height: 400px;
+  font-size: 10px;
+}
