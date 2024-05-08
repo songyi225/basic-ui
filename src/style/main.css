@@ -29,7 +29,7 @@ body {
 .header {
   background-color: #fff;
   height: 120px;
-  padding: 0 50px;
+  padding: 0 28px;
   /* 위아래는 없고 좌우 공백만 -> 숏핸드표기법 단축표기법 -> 첫번쨰는 위아래패딩, 두번째는 좌우패딩 */
   border-radius: 0 0 15px 15px;
   /* 왼쪽상단부터 시계방향 */
@@ -42,6 +42,36 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+}
+
+/* 텍스트 링크 모음 */
+.member-service {
+  --spacing: 8px;
+
+  translate: var(--spacing, 8px) 0;
+  font-size: 0; /* root의 글자크기가 바뀌면 맞춰서 바뀌라고 (반응형)*/
+  list-style-type: none; /* 불릿 제거 */
+  padding-inline-start: 0; /* 왼쪽 여백 삭제 (left의 의미) */
+  margin: 0; /* 블록 방향도 인라인 방향도 모두 0값을 주겠다! */
+  text-align: right;
+
+
+  /* 컴포넌트가 캡슐화가 되어있어야 함 */
+  li {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+    
+    a{
+      display: inherit;
+      padding: 8px var(--spacing, 8px) 8px 4px;
+      margin: 0;
+      font-variant: small-caps;
+      text-transform: uppercase;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
 
