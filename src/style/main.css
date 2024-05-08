@@ -11,6 +11,7 @@
 /* 그라디언트 배경, 배경 이미지 다중으로 배치 */
 body {
     margin: 0;
+    line-height: 1.15;
     font-family: "SUIT Variable", sans-serif;
     background-color: #ccc;
     background-image: url(/src/images/bg_flower.png), linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 100%);
@@ -42,6 +43,15 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  margin: 0;
+  font-size: 1em;
+
+  a, img {
+    display: block;
+    /* 인라인 상자 정렬 */
+    /* vertical-align: middle; */
+  }
+
 }
 
 /* 텍스트 링크 모음 */
