@@ -1,0 +1,21 @@
+.box {
+  border: 1px solid red;
+  ;
+}
+
+/* 가상 요소 선택자 - 기본적으로 인라인 모델 */
+.box::before {
+  content: "첫 번째 자식요소";
+  background-color: green;
+  width: 120px;
+  inline-size: 120px;
+  display: block;
+}
+
+.box::after {
+  content: "마지막 자식요소";
+  background-color: blueviolet;
+  width: 120px;
+  inline-size: 120px;
+  display: block;
+}
