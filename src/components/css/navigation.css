@@ -32,6 +32,13 @@ body {
     position: relative;
   }
 
+  > li:nth-child(-n+3) ul {
+    left: 0;
+  }
+  > li:nth-child(n+4) ul {
+    right: 0;
+  }
+
   /* 좀 더 구체적인 형태 : > li.is--active */ 
   .is--active {
     button {
@@ -48,7 +55,7 @@ body {
     }
 
     ul {
-      display: block;
+      display: flex;
     }
   }
 
@@ -75,14 +82,26 @@ body {
     display: none;
     position: absolute;
     top: 65px;
-    left: 0;
-    background: pink;
-    white-space: nowrap;
 
     li {
       display: inline-block;
-      
+      white-space: nowrap;
+      margin-right: 4px;
+
+      a {
+        display: flex;
+        padding: 8px;
+        gap: 8px;
+
+        /* span {
+          margin-right: 0.25em;
+        } */
+      }
+    
     }
+
+
+
   }
 
   /* 공부해보기 */
