@@ -1,0 +1,36 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body, h1 {
+  margin: 50px;
+}
+
+.form-checkbox {
+  position: relative;
+
+  input {
+    position: absolute;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+  }
+
+  label {
+    background: url(/components/images/un-check.svg) no-repeat 0 0 / contain;
+    padding-left: 25px;
+  }
+
+  input:checked + label {
+    background-image: url(/components/images/checked.svg);  
+  }
+
+  input:focus {
+    outline: none;
+  }
+  
+  input:focus-visible {
+    outline: 2px solid red;
+  }
+
+}
