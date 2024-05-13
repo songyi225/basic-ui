@@ -1,0 +1,49 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+  /* 8px 정도가 버튼과 숫자div와 버튼 사이에 gap이 줌 */
+
+  button {
+    border: 0;
+    background: transparent;
+    flex: 0 0 1.5rem;
+    padding: 0;
+  }
+
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+    /* grow shrink basic */
+
+    a {
+      color: var(--light-blue);
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    
+    }
+
+  }
+
+}
+
+

@@ -1,5 +1,8 @@
 @import url(/theory/css/default.css);
 
+
+
+
 .container{
   /* width: 80%;
   margin: 0 auto; */
@@ -14,8 +17,9 @@
 }
 
 .container-flude {
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
+  /* width: clamp(500px, 80%, 1200px); */
 }
 
 .container-fixed {
@@ -26,6 +30,32 @@
 .header{
   height: 70px;
   block-size: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+
+  div{
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #000;
+  }
+}
+
+.logo{
+  /* margin-right: auto;
+  margin-inline-end: auto; */
+  flex-shrink: 0;
+}
+
+.search{
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+
+.login{
+  order: 1;
+  flex-shrink: 0;
 }
 
 .navigation{
@@ -38,23 +68,66 @@
   flex-flow: row nowrap;
   column-gap: 50px;
   flex: 1 0 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 /* .main과 .sidebar를 Grouping */
 .main{
-  flex-basis: 200px;
+  /* flex-basis: 200px;
   flex-grow: 2;
-  flex-shrink: 0;
+  flex-shrink: 0; */
+  flex: 1 0 0;
+  box-shadow: 0 0 0 1px #000;
+  min-width: 500px;
+
+  .pagination {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .sidebar{
-  flex-basis: 200px;
-  flex-grow: 1;
+   /* flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: 200px; */
+  flex: 0 0 150px;
 }
 
 .footer{
   height: 50px;
   block-size: 50px;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem; /* 8px 정도가 버튼과 숫자div와 버튼 사이에 gap이 줌 */
+
+  button {
+    border: 0;
+    background: transparent;
+    flex: 0 0 2rem;
+    padding: 0;
+  }
+
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0; /* grow shrink basic */
+
+    a {
+      color: var(--light-blue);
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    
+    }
+
+  }
+
 }
