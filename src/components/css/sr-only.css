@@ -5,8 +5,8 @@
   inline-size: 1px;
   block-size: 1px; 
   */
-  width: 1px;
-  height: 1px;
+  width: 3px;
+  height: 3px;
   margin: -1px;
   clip: rect(0,0,0,0);
   clip-path: polygon(0 0, 0 0, 0 0);
