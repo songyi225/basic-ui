@@ -1,0 +1,14 @@
+@import url(default.css);
+
+
+
+figure {
+  background-color: yellow;
+  margin: 0;
+  width: 80%;
+  inline-size: 80%;
+
+  img {
+    max-width: 100%;
+  }
+}
