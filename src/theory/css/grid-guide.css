@@ -1,7 +1,8 @@
 :root{
   --min-container-size: 320px;
   --max-container-size: 90%;
-  --spacing: 24px;
+  /* --spacing: 24px; */
+  --gap: 24px;
   --column-count: 12;
 }
 
@@ -20,7 +21,7 @@ body {
   height: 100%;
   padding: 0 var(--spacing);
   display: grid;
-  column-gap: var(--spacing);
+  column-gap: var(--gap);
 
   .grid-column {
     background-color: var(--column-bg);
