@@ -11,17 +11,10 @@
   
   .header, .navigation, .footer{
     height: 100px;
-    block-size: 10px;
+    block-size: 100px;
     width: 100%;
     inline-size: 100%;
-    
   }
-}
-
-.header{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: end;
 }
 
 .main {
@@ -34,15 +27,15 @@
 /* 햄버거 버튼 */
 .burger-button {
   overflow: hidden;
-  background: red;
+  background: transparent;
   border: 0;
   padding: 0;
-  width: 100px;
-  height: 100px;
+  width: 24px;
+  height: 24px;
   z-index: 10;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 
   span {
     width: 100%;
@@ -50,45 +43,112 @@
     background-color: #fff;
     border-radius: 20px;
     transition: all 200ms;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
 
   .burger-bar-top {
-    
+    align-self: start;
   }
   .burger-bar-middle {
-    
+    align-self: center;
   }
   .burger-bar-bottom {
+    align-self: end;
+  }
 
+  /* is-active 클래스가 있을 때 */
+  &.is-active {
+    
+    .burger-bar-top, .burger-bar-bottom {
+      align-self: center;
+    }
+  
+    .burger-bar-top {
+      rotate: 45deg;
+    }
+    .burger-bar-middle {
+      translate: -100% 0;
+    }
+    .burger-bar-bottom {
+      rotate: -45deg;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
-/* is-active 클래스가 있을 때 */
-.burger-button.is-active {
-  
-  /* position: relative; */
+
+/* 로고 */
+.logo {
+  background-color: blue;
+  background-image: image-set(
+    url(/images/webcafe-logo.png) 1x,
+    url(/images/webcafe-logo@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  /* height: 50px; */
+  aspect-ratio: 1/0.28921568627450983; 
+  /* 소수점-> 로고이미지 원본 이미지인 204*59를 나눈 값 */
+}
+
+/* 추천 서적 - book */
+.main {
+  background-color: transparent;
+}
+
+/* .book {
+  background-color: transparent;
+  background-image: url(/apple/apple_watch.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  mask-image: url(/svg/star.svg);
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+} */
+
+.twitter {
+  font-size: 100px;
+  font-weight: 900;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url(/apple/apple_watch.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-clip: text;
+  color: transparent;
+}
 
-  span {
-    /* position: absolute; */
-  }
 
-  .burger-bar-top, .burger-bar-bottom {
-    
-  }
+/* 새소식 */
+.iframe-container {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 9;
 
-  .burger-bar-top {
-    translate: 0 100%;
-    rotate: 45deg;
+  iframe {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
   }
-  .burger-bar-middle {
-    translate: -100% 0;
-  }
-  .burger-bar-bottom {
-    translate: 0 -100%;
-    rotate: -45deg;
-  }
+}
+
+/* 스프라이트 이미지 */
+.sprite {
+  height: 60px;
+  background-color: hotpink;
+  background-image: url(./../../images/sprite_main.png);
+  background-repeat: no-repeat;
+  text-indent: 65px;
+}
+
+.news .sprite {
+  background-position: 0 -230px;
 }
 
 
