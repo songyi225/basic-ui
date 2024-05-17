@@ -91,6 +91,6 @@
 .sprite-icon {
   width: 100px;
   height: 100px;
-  background-color: yellow;
-  background-image: url(./../../images/icons/_sprite.svg#search);
+  background-color: green;
+  mask-image: url(/images/icons/stack.svg#dot_circled);
 }
