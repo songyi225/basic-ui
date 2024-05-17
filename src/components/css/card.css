@@ -2,16 +2,20 @@
 @import url(/style/theme.css);
 @import url(/style/base.css);
 
-body {
-  margin: 50px;
-}
-
-.card {
+.card{
   box-shadow: 0 0 0.25rem 1px #aaa;
+  border-radius: 0.25rem;
+  /* width: 300px; */
   display: flex;
-  flex-flow: column nowrap;
-  row-gap: 1px;
+  flex-flow: row nowrap;
+  row-gap: 1rem;
   color: #4A5569;
+
+  .info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+  }
 
   h2, p, ul{
     padding: 0 1rem;
@@ -21,18 +25,19 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
   }
-  
-  figure {
-    margin: 0;
+
+  figure{
     order: -1;
-    img {
+    margin: 0;
+    
+    img{
       border-radius: 0.25rem 0.25rem 0 0;
       max-width: 100%;
       vertical-align: top;
     }
   }
 
-  p {
+  p{
     margin: 0;
     line-height: 1.5;
   }
@@ -51,5 +56,4 @@ body {
       flex: 0 0 auto;
     }
   }
-
 }
