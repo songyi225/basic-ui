@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./../theory/css/grid-guide.css" />
   <link rel="stylesheet" href="./../theory/css/default.css" />
   <link rel="stylesheet" href="./css/webcafe.css" />
+  <link rel="stylesheet" href="./../components/css/sprites.css" />
   <script type="module" src="./../theory/js/grid-guide.js"></script>
   <script type="module" src="./../theory/js/navigation.js"></script>
 
@@ -34,16 +35,24 @@
 
     </div>
     <div class="main green grid-container">
-      <div class="book skyblue cols-6 sm-cols-4 lg-cols-6"><div class="sprite">추천서적</div></div>
+      <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">
+        <div class="flex-items-center headline sprite sprite-book">추천서적</div>
+      </div>
       <div class="news orange cols-6 sm-cols-8 lg-cols-6">
-        <div class="sprite">새소식</div>
+        <div class="flex-items-center headline sprite sprite-news">새소식</div>
         <figure class="iframe-container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/pDEXW5jTNyw?si=-Z98Dj-6ZzqWksgT" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         </figure>        
       </div>
-      <div class="board gray cols-12 sm-cols-8 lg-cols-4">게시판</div>
-      <div class="favorite red cols-6 sm-cols-4 lg-cols-3">인기 사이트</div>
-      <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">트위터</div>
+      <div class="board gray cols-12 sm-cols-8 lg-cols-4">
+        <div class="flex-items-center headline sprite sprite-board">게시판</div>
+      </div>
+      <div class="favorite red cols-6 sm-cols-4 lg-cols-3">
+        <div class="flex-items-center headline sprite sprite-favorite">인기사이트</div>
+      </div>
+      <div class="twitter olivegreen cols-6 sm-cols-12 lg-cols-5">
+        <div class="flex-items-center headline sprite sprite-twitter">트위터</div>
+      </div>
     </div>
     <div class="footer violet">푸터</div>
   </div>

@@ -5,7 +5,7 @@
 /* 스프라이트 이미지 */
 .sprite{
   height: 60px;
-  background: yellow url(./../../images/sprite_main.png) no-repeat;
+  background: yellow url(/images/sprite_main.png) no-repeat;
   padding-left: 64px;;
 }
 
@@ -40,4 +40,57 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+
+/* svg 이미지 */
+[class^="icon"] {
+  width: 100px;
+  height: 100px;
+}
+
+.svg-icon-search {
+  width: 150px;
+  height: 150px;
+  
+  path {
+    fill: red;
+
+    @media (prefers-color-scheme: dark) {
+      fill: blue;
+    }
+  }
+}
+
+/* svg 배경 이미지 */
+.plus {
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid red; */
+  /* background-repeat: no-repeat; */
+  background-color: yellow;
+  mask-image: url(./../../images/icons/plus.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: green;
+  }
+}
+
+[role="img"] {
+  width: 100px;
+  height: 100px;
+  
+  circle {
+    fill: red;
+  }
+}
+
+.sprite-icon {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  background-image: url(./../../images/icons/_sprite.svg#search);
 }
